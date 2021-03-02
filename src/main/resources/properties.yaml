@@ -1,0 +1,8 @@
+application:
+  name: "am-smtp-change-build"
+  
+mule:
+  env: "build"
+  
+api:
+  id: "123456"

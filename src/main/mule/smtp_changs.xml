@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:json-logger="http://www.mulesoft.org/schema/mule/json-logger"
+	xmlns:email="http://www.mulesoft.org/schema/mule/email" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd
+http://www.mulesoft.org/schema/mule/json-logger http://www.mulesoft.org/schema/mule/json-logger/current/mule-json-logger.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
+	<json-logger:config name="JSON_Logger_Config" doc:name="JSON Logger Config" doc:id="34a53cf5-4dd1-434c-b962-880d6df31a7f" environment="local" applicationName="smtp_change" applicationVersion="0.1"/>
+	<flow name="smtp_changsFlow" doc:id="c5c4ad87-1a5a-44e9-a791-a1f5322c15e8" >
+		<logger level="INFO" doc:name="Logger" doc:id="9e140202-7f62-4e42-8cbc-9ac355c16876" message="Successfull hit"/>
+		<set-payload value="HTTP response!" doc:name="Set Payload" doc:id="a93b46e2-2b24-4b65-9328-fe630508c3a2" />
+		<logger level="INFO" doc:name="Logger" doc:id="468be122-19f9-4ff5-b882-d47f6bd6f86a" message="End of the flow"/>
+	</flow>
+</mule>
